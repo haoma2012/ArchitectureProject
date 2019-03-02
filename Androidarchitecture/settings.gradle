@@ -1,0 +1,4 @@
+include ':app'
+
+include(':javaarchitecture')
+project(':javaarchitecture').projectDir = new File('../javaarchitecture')

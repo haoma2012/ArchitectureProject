@@ -1,4 +1,14 @@
-include ':app'
+include ':app', ':uilibrary', ':framework'
 
+
+// ui库
+include(':uilibrary')
+project(':uilibrary').projectDir = new File('../uilibrary')
+
+// 三方库 中间核心层
+include(':framework')
+project(':framework').projectDir = new File('../framework')
+
+// java 库
 include(':javaarchitecture')
 project(':javaarchitecture').projectDir = new File('../javaarchitecture')

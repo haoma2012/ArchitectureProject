@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Design.Theme"  parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:scrollViewStyle">@style/ScrollView.NoBar</item>
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
+    <style name="ScrollView.NoBar" parent="android:Widget.ScrollView">
+        <item name="android:scrollbars">none</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="searchLayoutTextSize" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="TabPopAnimTranslate">
+        <item name="android:windowEnterAnimation">@anim/pop_translate_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_translate_out</item>
+    </style>
+
+
+    <style name="InPutHintError" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/red_b</item>
+    </style>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/widget_dialog_coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- 头布局 折叠区域-->
+    <include layout="@layout/header_sheep_appbar_layout"/>
+    <!--<include layout="@layout/content_main"/>-->
+
+    <!-- 内容布局 -->
+    <android.support.v4.view.ViewPager
+            android:id="@+id/widget_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            app:srcCompat="@android:drawable/ic_dialog_email"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

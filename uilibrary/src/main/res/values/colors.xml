@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 设计规范颜色 -->
+    <color name="black_a">#323232</color>
+    <color name="colour_e">#c4a27a</color>
+    <color name="black_b">#888888</color>
+    <color name="black_cf">#cfcfcf</color>
+    <color name="black_71">#717171</color>
+    <color name="black_e">#E8E8E8</color>
+    <color name="red_b">#ff5793</color>
+    <color name="red_bn">#ff5793</color>
+    <color name="red_bt">#ff5793</color>
+    <color name="cust_status_color">#ff5793</color>
+    <color name="white">#ffffff</color>
+    <color name="red_a">#ff87a0</color>
+    <color name="colour_d">#ffa200</color>
+    <color name="colour_g">#b0d25b</color>
+    <color name="colour_f">#10b524</color>
+    <color name="colour_h">#d099d0</color>
+    <color name="white_a">#ffffff</color>
+    <color name="colour_b">#6aaafa</color>
+    <color name="colour_k">#fff9f0</color>
+    <color name="xiyou_translucent">#7f000000</color>
+    <color name="trans_color">#00000000</color>
+    <color name="xiyou_auto_textview">#FF5793</color>
+    <color name="xiyou_darker_red">#cc405c</color>
+    <!-- 设计规范颜色 -->
+    <color name="white_an">#ffffff</color>
+    <color name="black_i">#e5e5e5</color>
+    <color name="black_66">#666666</color>
+    <color name="black_ee">#eeeeee</color>
+    <color name="yellow_37">#FFEA37</color>
+    <color name="orange_3d">#FF513D</color>
+    <color name="orange_4f">#FF384F</color>
+    <color name="black_f5">#F5F5F5</color>
+    <color name="black_dd">#7FDDDDDD</color>
+    <color name="black_et">#dddddd</color>
+
+</resources>

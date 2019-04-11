@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+
+    <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/btn_add_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:background="#ff5793"
+                    android:padding="5dp"
+                    android:textAllCaps="false"
+                    android:text="动态添加Fragment按钮"/>
+
+            <Button
+                    android:id="@+id/btn_show_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:background="#ff5793"
+                    android:padding="5dp"
+                    android:layout_marginTop="2dp"
+                    android:textAllCaps="false"
+                    android:text="弹框"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sheep_switch_one"
+                    android:contentDescription="@string/app_name"/>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <CheckBox
+            android:text="CheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:id="@+id/checkBox"/>
+
+    <com.mobike.uilibrary.view.button.CircleCheckBox
+            android:id="@+id/circle_check_box"
+            android:layout_width="40dp"
+            app:checked="true"
+            android:layout_height="40dp"/>
+
+    <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_value_44"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_value_10"
+            android:paddingRight="@dimen/dp_value_10"
+            android:gravity="center">
+
+        <RadioButton
+                android:text="tab1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_value_44"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:checked="true"
+                android:textColor="@drawable/check_select_color"
+                android:textAllCaps="false"
+                android:button="@null"
+                android:textSize="@dimen/text_size_15"
+                android:id="@+id/radioButton1"/>
+
+        <RadioButton
+                android:text="tab2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_value_44"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@drawable/check_select_color"
+                android:textAllCaps="false"
+                android:button="@null"
+                android:textSize="@dimen/text_size_15"
+                android:id="@+id/radioButton2"/>
+
+        <RadioButton
+                android:text="tab3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_value_44"
+                android:layout_weight="1"
+                android:textColor="@drawable/check_select_color"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_15"
+                android:gravity="center"
+                android:button="@null"
+                android:id="@+id/radioButton3"/>
+
+    </RadioGroup>
+
+    <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:background="@color/red_b"
+            android:textColor="@color/white_a"
+            android:textSize="@dimen/text_size_15"
+            android:textOn="选中"
+            android:textOff="未选中"
+            android:id="@+id/toggleButton"/>
+
+    <Switch
+            android:showText="false"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textOn="开"
+            android:checked="true"
+            android:textOff="关"
+            android:id="@+id/switch2"/>
+
+    <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="normal"
+
+            app:srcCompat="@drawable/search_edit_left_input_icon"
+            android:id="@+id/floatingActionButton"/>
+
+
+</LinearLayout>

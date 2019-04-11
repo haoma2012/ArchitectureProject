@@ -1,5 +1,6 @@
 package com.mobike.android_architecture
 
+import android.os.Build
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.design.widget.Snackbar
@@ -9,20 +10,28 @@ import android.support.v7.app.AppCompatActivity
 import android.text.method.LinkMovementMethod
 import android.view.Menu
 import android.view.MenuItem
+import android.view.Window
 import android.widget.TextView
 import com.mobike.android_architecture.utils.EcoStringUtils
+import com.mobike.uilibrary.widget.UIWidgetActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
+        }
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        val mStrData = "<strong><span style='color:#323232;font-size:14px;'>好友为你推荐了<span style='color:#FF384F;font-size:18px;'>17款<span style='color:#323232;font-size:14px;'>商品</span> </span> </span></strong>"
-        val htmlStr = "<strong><span style='color:#FF384F;font-size:14px;'>好友为你推荐了<span style='color:#FF384F;font-size:18px;'>" + 18 + "款<span style='color:#FF384F;font-size:14px;'>商品</span> </span> </span></strong>"
+        val mStrData =
+            "<strong><span style='color:#323232;font-size:14px;'>好友为你推荐了<span style='color:#FF384F;font-size:18px;'>17款<span style='color:#323232;font-size:14px;'>商品</span> </span> </span></strong>"
+        val htmlStr =
+            "<strong><span style='color:#FF384F;font-size:14px;'>好友为你推荐了<span style='color:#FF384F;font-size:18px;'>" + 18 + "款<span style='color:#FF384F;font-size:14px;'>商品</span> </span> </span></strong>"
 
         val mTvTestHtml = findViewById<TextView>(R.id.tv_test_html)
 
@@ -30,17 +39,27 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         mTvTestHtml.setText(spanned)
         mTvTestHtml.setMovementMethod(LinkMovementMethod.getInstance())
 
+
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                .setAction("Action", null).show()
         }
 
         val toggle = ActionBarDrawerToggle(
-                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+            this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+        )
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        // 直接使用id对控件操作：静态布局导入
+        btn_widget.setOnClickListener {
+            UIWidgetActivity.enterActivity(this)
+            // 默认转场动画
+            //overridePendingTransition(R.anim.bottom_anim_in, R.anim.bottom_anim_out)
+            // 5.0新转场动画
+        }
     }
 
     override fun onBackPressed() {

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/ll_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <!-- Common UI-->
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_value_20"
+                android:text="常用控件"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white_a"
+                android:background="@color/red_b"/>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                >
+
+            <TextView
+                    android:id="@+id/tv_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@color/red_b"
+                    android:gravity="center"
+                    android:textColor="@color/white_a"
+                    android:text="我是文本"/>
+
+            <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textSize="8sp"
+                    android:background="@color/black_b"
+                    android:layout_toRightOf="@id/tv_text"
+                    android:text="我是一个按钮"/>
+
+            <ImageView
+                    android:id="@+id/image_view"
+                    android:layout_width="@dimen/dp_value_50"
+                    android:layout_height="@dimen/dp_value_30"
+                    android:src="@drawable/sheep_switch_one"
+                    android:background="@color/colour_b"
+                    android:scaleType="center"
+                    android:contentDescription="@string/app_name"
+                    android:layout_toRightOf="@id/btn_add"/>
+
+            <Switch
+                    android:id="@+id/btn_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image_view"
+                    android:layout_marginLeft="@dimen/dp_value_5"/>
+
+            <!-- add edit Text-->
+            <include
+                    android:id="@+id/edit_include"
+                    layout="@layout/layout_edit_ui"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_text"/>
+
+            <!-- add button UI-->
+            <include
+                    android:id="@+id/button_include"
+                    layout="@layout/layout_button_ui"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edit_include"/>
+
+            <!-- add widgets UI-->
+            <include
+                    android:id="@+id/widget_include"
+                    layout="@layout/layout_widget_ui"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button_include"/>
+
+
+        </RelativeLayout>
+
+
+        <fragment
+                android:id="@+id/widget_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:name="com.mobike.uilibrary.widget.UIWidgetFragment"/>
+
+        <RelativeLayout
+                android:id="@+id/rl_tab_fragment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/frame_content"
+                    android:layout_height="200dp"
+                    android:visibility="visible"/>
+
+            <!-- ViewPager -->
+            <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="200dp">
+
+                <!-- ViewPager 当前指示器 -->
+                <android.support.v4.view.PagerTitleStrip
+                        android:id="@+id/pager_strip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+
+            </android.support.v4.view.ViewPager>
+
+
+            <android.support.design.widget.BottomNavigationView
+                    android:id="@+id/bottom_navigation"
+                    android:layout_width="match_parent"
+                    app:menu="@menu/bottom_menu"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/view_pager"
+                    android:layout_height="@dimen/dp_value_44"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

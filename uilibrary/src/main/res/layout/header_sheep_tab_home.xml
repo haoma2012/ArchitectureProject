@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_tab_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_value_36"
+    app:elevation="@dimen/dp_value_10">
+
+    <ImageView
+        android:id="@+id/iv_tab_classify"
+        android:layout_width="@dimen/dp_value_35"
+        android:layout_height="@dimen/dp_value_35"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="center"
+        android:src="@drawable/sheep_switch_one"/>
+
+    <!--吸顶Tab导航条容器, 可横向滑动-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/header_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_value_35"
+        android:layout_marginEnd="@dimen/dp_value_35"
+        android:layout_marginRight="@dimen/dp_value_35"
+        android:background="@color/white_a"
+        app:tabBackground="@color/trans_color"
+        app:tabContentStart="0dp"
+        app:tabIndicatorColor="@color/red_b"
+        app:tabIndicatorHeight="2dp"
+        app:tabMinWidth="30dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="15dp"
+        app:tabPaddingStart="15dp"
+        app:tabSelectedTextColor="@color/red_b"
+        app:tabTextAppearance="@style/searchLayoutTextSize"
+        app:tabTextColor="@color/black_66"/>
+
+
+    <View
+        android:id="@+id/separator_line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_px_value_1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_et"/>
+
+</RelativeLayout>
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/red_b"
+            app:title="@string/app_name"
+            android:gravity="center"
+            app:buttonGravity="bottom"
+            app:titleMarginStart="20dp"
+            app:collapseIcon="@drawable/close_btn"
+            app:logo="@drawable/close_btn"
+            android:layout_alignParentTop="true"
+            app:titleTextColor="@color/white_a"
+            android:id="@+id/title_bar"/>
+
+    <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_below="@id/title_bar"
+            android:text="hello World!"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignLeft="@+id/tv_content"
+            android:layout_alignStart="@+id/tv_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tv_content"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:layout_marginTop="9dp"
+            android:layout_below="@+id/editText"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentLeft="true"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editText3"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/editText2"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_alignParentLeft="true"/>
+
+    <!--<include-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--layout="@layout/layout_flex_item"-->
+            <!--android:layout_alignParentBottom="true"/>-->
+
+</RelativeLayout>

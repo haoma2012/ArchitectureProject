@@ -1,6 +1,9 @@
 package com.mobike.javaarchitecture.executors;
 
-import java.util.concurrent.Executor;
+import com.mobike.javaarchitecture.executors.consumer.Consumer;
+import com.mobike.javaarchitecture.executors.consumer.Producer;
+import com.mobike.javaarchitecture.executors.consumer.Storage;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -12,17 +15,30 @@ public class TestExecutorsDemo {
 
     public static void main(String[] args) {
 
-        Executor executor;
-        ExecutorService executorService = null;
-        Executors executors;
 
+        Storage storage = new Storage();
+        ExecutorService service = Executors.newCachedThreadPool();
 
-        executorService.execute(new Runnable() {
-            @Override
-            public void run() {
-
-            }
-        });
-
+        Producer p = new Producer("张三", storage);
+        Producer p2 = new Producer("李四", storage);
+        Consumer c = new Consumer("王五", storage);
+        Consumer c2 = new Consumer("老刘", storage);
+        Consumer c3 = new Consumer("老林", storage);
+        service.submit(p);
+        //service.submit(p2);
+        service.submit(c);
+        service.submit(c2);
+        service.submit(c3);
     }
+
+
+
+
+
+
+
+
+
+
+
 }

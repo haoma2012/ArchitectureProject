@@ -1,5 +1,7 @@
 package com.mobike.javaarchitecture.collection;
 
+import com.mobike.javaarchitecture.collection.sort.SortUtils;
+
 import java.util.*;
 
 /**
@@ -26,19 +28,27 @@ public class TestCollectionDemo {
             mNumSet.add(i + 1);
 
         }
-
-
-        TreeMap<String, String> map = new TreeMap<>();
-        map.put("position", "0");
-
-        System.out.println(map.toString());
-
         //Collections.synchronizedList(heroes);
+
+        // 红黑树测试
+        testRedTree();
+        // 希尔排序
+        SortUtils.shelSort();
+        // 归并排序
+        SortUtils.funMergeSort();
 
 
         shuffle();
         testSet();
         testPush();
+
+    }
+
+    private static void testRedTree() {
+        TreeMap<String, String> map = new TreeMap<>();
+        map.put("position", "0");
+
+        System.out.println(map.toString());
     }
 
     private static void testSet() {

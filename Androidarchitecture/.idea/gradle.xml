@@ -9,7 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/dilutions_plugin" />
             <option value="$PROJECT_DIR$/../JavaArchitecture" />
+            <option value="$PROJECT_DIR$/../framework" />
+            <option value="$PROJECT_DIR$/../uilibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

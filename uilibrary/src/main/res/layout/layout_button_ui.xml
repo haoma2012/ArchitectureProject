@@ -6,6 +6,28 @@
         android:layout_width="match_parent"
         android:layout_height="400dp">
 
+    <RelativeLayout
+            android:id="@+id/rl_loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="@dimen/dp_value_10"
+            android:layout_marginBottom="@dimen/dp_value_10"
+            android:layout_marginLeft="@dimen/dp_value_24"
+            android:layout_marginRight="@dimen/dp_value_24"
+            android:background="@drawable/dialog_tmall_red_round">
+
+        <TextView
+                android:id="@+id/tv_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="最高返50%"
+                android:textColor="@color/white_a"
+                android:textSize="@dimen/text_size_18"/>
+
+    </RelativeLayout>
+
+
 
     <HorizontalScrollView
             android:layout_width="match_parent"
@@ -18,7 +40,7 @@
                 android:orientation="horizontal">
 
             <Button
-                    android:id="@+id/btn_add_fragment"
+                    android:id="@+id/btn_show_enter_dialog"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
@@ -26,7 +48,19 @@
                     android:background="#ff5793"
                     android:padding="5dp"
                     android:textAllCaps="false"
-                    android:text="动态添加Fragment按钮"/>
+                    android:text="返利弹框"/>
+
+            <Button
+                    android:id="@+id/btn_add_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:background="#ff5793"
+                    android:layout_marginLeft="@dimen/dp_value_5"
+                    android:padding="5dp"
+                    android:textAllCaps="false"
+                    android:text="动态Fragment按钮"/>
 
             <Button
                     android:id="@+id/btn_show_dialog"
@@ -38,14 +72,55 @@
                     android:padding="5dp"
                     android:layout_marginTop="2dp"
                     android:textAllCaps="false"
+                    android:layout_marginLeft="@dimen/dp_value_5"
                     android:text="弹框"/>
 
             <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dp_value_5"
                     android:src="@drawable/sheep_switch_one"
                     android:contentDescription="@string/app_name"/>
+
+            <Button
+                    android:id="@+id/btn_show_web"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:background="#ff5793"
+                    android:padding="5dp"
+                    android:layout_marginLeft="@dimen/dp_value_5"
+                    android:layout_marginTop="2dp"
+                    android:textAllCaps="false"
+                    android:text="WebView"/>
+
+            <Button
+                    android:id="@+id/btn_show_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:background="#ff5793"
+                    android:padding="5dp"
+                    android:layout_marginLeft="@dimen/dp_value_5"
+                    android:layout_marginTop="2dp"
+                    android:textAllCaps="false"
+                    android:text="ShowVideo"/>
+
+            <Button
+                    android:id="@+id/btn_send_broadcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:background="#ff5793"
+                    android:padding="5dp"
+                    android:layout_marginLeft="@dimen/dp_value_5"
+                    android:layout_marginTop="2dp"
+                    android:textAllCaps="false"
+                    android:text="发送广播"/>
 
 
         </LinearLayout>

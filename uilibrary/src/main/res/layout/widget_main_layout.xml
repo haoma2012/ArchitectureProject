@@ -11,6 +11,41 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+        <!-- 自定义View-->
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_value_50"
+                android:background="@drawable/gray_round_1">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/canvas_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white_a"
+                        android:textSize="@dimen/text_size_14"
+                        android:background="@color/red_b"
+                        android:padding="@dimen/dp_value_5"
+                        android:layout_marginLeft="@dimen/dp_value_5"
+                        android:layout_marginRight="@dimen/dp_value_5"
+                        android:text="CanvasDemo"/>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_value_20"
+                android:background="@color/red_b"/>
+
 
         <!-- Common UI-->
         <TextView
@@ -25,8 +60,10 @@
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
-                >
+                android:visibility="visible">
+
+
+
 
             <TextView
                     android:id="@+id/tv_text"
@@ -63,13 +100,32 @@
                     android:layout_toRightOf="@id/image_view"
                     android:layout_marginLeft="@dimen/dp_value_5"/>
 
+
+            <ImageView
+                    android:id="@+id/download_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_value_200"
+                    android:layout_below="@id/tv_text"
+                    android:visibility="gone"
+                    android:contentDescription="@string/app_name"/>
+
+            <TextView
+                    android:id="@+id/tv_test_privacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/black_a"
+                    android:layout_below="@id/tv_text"
+                    android:text="隐私点击"/>
+
             <!-- add edit Text-->
             <include
                     android:id="@+id/edit_include"
                     layout="@layout/layout_edit_ui"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_text"/>
+                    android:layout_below="@id/tv_test_privacy"/>
 
             <!-- add button UI-->
             <include
@@ -135,6 +191,35 @@
                     android:layout_height="@dimen/dp_value_44"/>
 
         </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/cardView"
+                app:cardCornerRadius="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="棒冰行动，公益传播设计夏令营"/>
+
+        </android.support.v7.widget.CardView>
+
+        <Spinner
+                android:id="@+id/spinner_simple"
+                android:layout_marginTop="10dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:entries="@array/countries"/>
+
+        <ViewStub
+                android:id="@+id/contentPanel"
+                android:inflatedId="@+id/inflatedStart"
+                android:layout="@layout/title_bar_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
 
     </LinearLayout>

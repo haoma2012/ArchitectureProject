@@ -3,6 +3,7 @@ package com.mobike.uilibrary.adapter;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,9 @@ public class BaseTextRecycleAdapter extends RecyclerView.Adapter<BaseTextRecycle
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         MyViewHolder holder = new MyViewHolder(mInflater.inflate(R.layout.item_text_dialog, parent, false));
+
+        Log.d("RecycleView", "当前MyViewHolder=" + holder);
+
         return holder;
     }
 

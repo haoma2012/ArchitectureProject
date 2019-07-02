@@ -38,8 +38,16 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
         setContentView(getLayoutId());
         initEventBus();
+        beforeInitView(savedInstanceState);
         // 初始化View
         initView();
+    }
+
+    /**
+     * 初始化前执行
+     * @param savedInstanceState bundle
+     */
+    protected void beforeInitView(@Nullable Bundle savedInstanceState) {
     }
 
     protected abstract int getLayoutId();

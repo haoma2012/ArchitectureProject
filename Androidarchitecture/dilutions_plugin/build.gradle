@@ -1,0 +1,20 @@
+apply plugin: 'groovy'
+// 上传maven
+apply plugin: 'maven'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+
+group='com.ebmobike.dilution'
+version='1.0.0'
+archivesBaseName='dilution-plugin'
+
+uploadArchives{
+    repositories {
+        mavenDeployer{
+            repository(url: uri('../tbModulePlugin'))
+        }
+    }
+}

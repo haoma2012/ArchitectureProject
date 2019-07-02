@@ -51,4 +51,12 @@
         <attr name="background_color" format="color"/>
     </declare-styleable>
 
+    <!-- 自定义属性-->
+    <declare-styleable name="MyCanvasView">
+
+        <attr name="paint_color" format="color"/>
+
+
+    </declare-styleable>
+
 </resources>

@@ -28,4 +28,20 @@
         <item name="android:textColor">@color/red_b</item>
     </style>
 
+    <!--标题与NavigationIcon的距离-->
+    <style name="Toolbar.MyStyle" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+    </style>
+
+    <!--Toolbar标题文字大小-->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- 返利商城弹框动画 -->
+    <style name="TmEnterDialogStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/tm_dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/tm_dialog_exit_anim</item>
+    </style>
 </resources>

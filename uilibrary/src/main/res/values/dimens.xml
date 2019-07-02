@@ -4,6 +4,7 @@
     <!-- 像素定义 -->
     <dimen name="line_px_value_1">1px</dimen>
     <dimen name="line_px_value_2">2px</dimen>
+    <dimen name="line_px_value_3">3px</dimen>
 
 
     <dimen name="dp_10">10dp</dimen>
@@ -56,27 +57,40 @@
     <dimen name="dp_value_45">45dip</dimen>
     <dimen name="dp_value_46">46dp</dimen>
     <dimen name="dp_value_47">47dp</dimen>
-    <dimen name="dp_value_48">48dip</dimen>
-    <dimen name="dp_value_49">49dip</dimen>
+    <dimen name="dp_value_48">48dp</dimen>
+    <dimen name="dp_value_49">49dp</dimen>
+    <dimen name="dp_value_50">50dp</dimen>
+    <dimen name="dp_value_51">51dp</dimen>
+    <dimen name="dp_value_52">52dp</dimen>
     <dimen name="dp_value_53">53dp</dimen>
     <dimen name="dp_value_55">55dp</dimen>
     <dimen name="dp_value_56">56dp</dimen>
     <dimen name="dp_value_57">57dp</dimen>
+    <dimen name="dp_value_58">58dp</dimen>
+    <dimen name="dp_value_59">59dp</dimen>
     <dimen name="dp_value_60">60dp</dimen>
+    <dimen name="dp_value_61">61dp</dimen>
     <dimen name="dp_value_62">62dp</dimen>
+    <dimen name="dp_value_63">63dp</dimen>
+    <dimen name="dp_value_64">64dp</dimen>
+    <dimen name="dp_value_65">65dp</dimen>
     <dimen name="dp_value_66">66dp</dimen>
+    <dimen name="dp_value_67">67dp</dimen>
+    <dimen name="dp_value_68">68dp</dimen>
     <dimen name="dp_value_69">69dp</dimen>
+    <dimen name="dp_value_70">70dp</dimen>
     <dimen name="dp_value_71">71dp</dimen>
+    <dimen name="dp_value_72">72dp</dimen>
+    <dimen name="dp_value_73">73dp</dimen>
     <dimen name="dp_value_74">74dp</dimen>
-    <dimen name="dp_value_180">180dip</dimen>
-
-
-    <dimen name="dp_value_50">50dip</dimen>
-
-    <dimen name="dp_value_75">75dip</dimen>
-
-    <dimen name="dp_value_80">80dip</dimen>
-    <dimen name="dp_value_86">86dip</dimen>
+    <dimen name="dp_value_75">75dp</dimen>
+    <dimen name="dp_value_76">76dp</dimen>
+    <dimen name="dp_value_77">77dp</dimen>
+    <dimen name="dp_value_78">78dp</dimen>
+    <dimen name="dp_value_79">79dp</dimen>
+    <dimen name="dp_value_80">80dp</dimen>
+    <dimen name="dp_value_81">81dp</dimen>
+    <dimen name="dp_value_86">86dp</dimen>
     <dimen name="dp_value_90">90dp</dimen>
     <dimen name="dp_value_104">104dp</dimen>
     <dimen name="dp_value_108">108dp</dimen>
@@ -86,6 +100,7 @@
     <dimen name="dp_value_144">144dp</dimen>
     <dimen name="dp_value_156">156dp</dimen>
     <dimen name="dp_value_168">168dp</dimen>
+    <dimen name="dp_value_180">180dip</dimen>
     <dimen name="dp_value_200">200dp</dimen>
     <dimen name="dp_value_220">220dp</dimen>
 

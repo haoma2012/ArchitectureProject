@@ -2,6 +2,9 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.mobike.uilibrary">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
             android:allowBackup="false"
             android:label="@string/app_name"
@@ -16,6 +19,30 @@
         <activity
                 android:name=".widget.WidgetDialogActivity"
                 android:theme="@style/Design.Theme"/>
+
+        <activity
+                android:name=".widget.webview.UIWebViewActivity"
+                android:theme="@style/Design.Theme"
+                android:screenOrientation="portrait"/>
+
+        <activity
+                android:name=".widget.video.UIVideoActivity"
+                android:theme="@style/Design.Theme"/>
+
+        <activity
+                android:name=".widget.MyCanvasActivity"
+                android:theme="@style/Design.Theme"/>
+
+        <service android:name=".thread.MyService"/>
+
+        <service android:name=".thread.MyIntentService"/>
+
+
+
+        <provider
+                android:authorities="com.mobike.android_architecture"
+                android:name=".component.MyContentProvider"
+                android:exported="false"/>
 
     </application>
 

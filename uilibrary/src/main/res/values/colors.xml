@@ -36,5 +36,12 @@
     <color name="black_f5">#F5F5F5</color>
     <color name="black_dd">#7FDDDDDD</color>
     <color name="black_et">#dddddd</color>
+    <color name="black_h">#f5f5f5</color>
+
+    <color name="white_a_50_percent_transparency">#88ffffff</color>
+    <color name="white_a_20_percent_transparency">#33ffffff</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="wheelview_text_selected_color">#FFFF5073</color>
+    <color name="red_b_50_percent_transparency">#88ff74b9</color>
 
 </resources>

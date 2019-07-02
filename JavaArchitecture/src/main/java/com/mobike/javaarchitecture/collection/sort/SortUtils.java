@@ -36,6 +36,9 @@ public class SortUtils {
             return;
         }
 
+        System.out.println("排序前：");
+        for (int i1 : arr) System.out.print(i1 + "\t");
+
         int length = arr.length;
 
         for (int i = 0; i < length - 1; i++) {
@@ -52,6 +55,9 @@ public class SortUtils {
                 break;
             }
         }
+
+        System.out.println("排序后：");
+        for (int i1 : arr) System.out.print(i1 + "\t");
     }
 
     //直接插入排序基本思想是每一步将一个待排序的记录，插入到前面已经排好序的有序序列中去，直到插完所有元素为止。
@@ -84,5 +90,112 @@ public class SortUtils {
         arr[b] = arr[a] - arr[b];
         arr[a] = arr[a] - arr[b];
     }
+
+    /**
+     * 先选取一个小于n的整数d（步长），然后按照步长d将待排序序列分为d组，
+     * 从第一个记录开始间隔为d的为一个组。然后对各组内进行直接插入排序，
+     * 一趟过后，间隔为d的序列有序，随着有序性的改善，减少步长d重复进行 。
+     * 直到d=1使得间隔为1的记录有序，也就达到了整体有序
+     */
+    public static void shelSort() {
+        int[] a = {49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1};
+        System.out.println("排序之前：");
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
+        //希尔排序
+        int d = a.length;
+        while (true) {
+            d = d / 2;
+            for (int x = 0; x < d; x++) {
+                for (int i = x + d; i < a.length; i = i + d) {
+                    int temp = a[i];
+                    int j;
+                    for (j = i - d; j >= 0 && a[j] > temp; j = j - d) {
+                        a[j + d] = a[j];
+                    }
+                    a[j + d] = temp;
+                }
+            }
+            if (d == 1) {
+                break;
+            }
+        }
+        System.out.println();
+        System.out.println("排序之后：");
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
+    }
+
+    //归并排序
+    public static void funMergeSort() {
+
+        int[] a = {49, 38, 65, 97, 76, 13, 27, 49, 78, 34, 12, 64, 1};
+        System.out.println("归并排序之前：");
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
+        funMergeSort(a);
+        System.out.println();
+        System.out.println("排序之后：");
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
+    }
+
+    /**
+     * 归并排序
+     * 分治法的一个典型应用，它的主要思想是：将待排序序列分为两部分，
+     * 对每部分递归地应用归并排序，在两部分都排好序后进行合并
+     * @param array 数组
+     */
+    public static void funMergeSort(int[] array) {
+        if (array.length > 1) {
+            int length1 = array.length / 2;
+            int[] array1 = new int[length1];
+            System.arraycopy(array, 0, array1, 0, length1);
+            funMergeSort(array1);
+
+            int length2 = array.length - length1;
+            int[] array2 = new int[length2];
+            System.arraycopy(array, length1, array2, 0, length2);
+            funMergeSort(array2);
+
+            int[] datas = merge(array1, array2);
+            System.arraycopy(datas, 0, array, 0, array.length);
+        }
+
+    }
+
+    //合并两个数组
+    private static int[] merge(int[] list1, int[] list2) {
+
+        int[] list3 = new int[list1.length + list2.length];
+
+        int count1 = 0;
+        int count2 = 0;
+        int count3 = 0;
+
+        while (count1 < list1.length && count2 < list2.length) {
+
+            if (list1[count1] < list2[count2]) {
+                list3[count3++] = list1[count1++];
+            } else {
+                list3[count3++] = list2[count2++];
+            }
+        }
+
+        while (count1 < list1.length) {
+            list3[count3++] = list1[count1++];
+        }
+
+        while (count2 < list2.length) {
+            list3[count3++] = list2[count2++];
+        }
+
+        return list3;
+    }
+
 
 }

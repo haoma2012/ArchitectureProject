@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include
+            android:id="@+id/include_title_bar"
+            layout="@layout/title_bar_layout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"/>
+
+    <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/include_title_bar">
+
+        <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:text="使用VideoView播放视频"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:background="@color/red_b"
+                    android:textColor="@color/white_a"
+                    android:layout_height="40dp"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_value_200">
+
+                <VideoView
+                        android:id="@+id/video_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_value_200"/>
+
+                <include layout="@layout/base_video_operate_layout"/>
+
+            </RelativeLayout>
+
+
+            <TextureView
+                    android:id="@+id/texture_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_value_200"/>
+
+            <CalendarView
+                    android:id="@+id/calendar_view"
+                    android:layout_width="match_parent"
+                    android:showWeekNumber="true"
+                    android:shownWeekCount="1"
+                    android:layout_height="wrap_content"/>
+
+            <include
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_value_200"
+                    layout="@layout/circle_loading_view"/>
+
+            <SeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_marginTop="@dimen/dp_value_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_value_20"/>
+
+            <RatingBar
+                    android:numStars="3"
+                    android:isIndicator="true"
+                    android:rating="0.5"
+                    android:stepSize="0.5"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"/>
+
+            <android.support.v7.widget.SearchView
+                    android:id="@+id/search_view"
+                    app:showDividers="middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_value_44"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="200dp"/>-->
+
+
+
+</RelativeLayout>

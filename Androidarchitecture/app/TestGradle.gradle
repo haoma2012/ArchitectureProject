@@ -1,0 +1,11 @@
+// gradle的groovy学习
+apply plugin: Plugin2
+
+class Plugin2 implements Plugin<Project> {
+
+    @Override
+    void apply(Project target) {
+        println("this is a plugin in the file 'build.gradle'...")
+    }
+}
+

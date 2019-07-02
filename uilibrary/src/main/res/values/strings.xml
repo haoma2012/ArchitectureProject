@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">UILibrary</string>
+
+    <string name="welcome_person_privacy_policy">关于您个人信息的相关问题请详见%1$s和%2$s,请您认真阅读并充分理解，我们会不断完善技术和安全管理，保护您的个人信息。</string>
+
 </resources>

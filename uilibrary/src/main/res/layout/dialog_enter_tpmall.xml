@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rl_dialog_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="173dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/white_bg_7">
+
+        <ImageView
+            android:id="@+id/iv_tmall_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_dialog_pdd_bg"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_value_24"
+            android:layout_marginRight="@dimen/dp_value_24"
+            android:layout_marginBottom="@dimen/dp_value_20"
+            android:background="@drawable/bg_progress_pdd_shape">
+
+            <TextView
+                android:id="@+id/tv_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="最高返50%"
+                android:textColor="@color/white_a"
+                android:textSize="@dimen/text_size_18"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

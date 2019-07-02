@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/tv_kotlin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:textColor="@color/white_a"
+            android:background="@color/red_b"
+            android:paddingTop="@dimen/dp_value_5"
+            android:paddingBottom="@dimen/dp_value_5"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_16"
+            android:text="Hello! Kotlin~ , Go to study kotlin"/>
+
+    <FrameLayout
+            android:id="@+id/frame_content"
+            android:layout_marginTop="@dimen/dp_value_30"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+
+</android.support.constraint.ConstraintLayout>

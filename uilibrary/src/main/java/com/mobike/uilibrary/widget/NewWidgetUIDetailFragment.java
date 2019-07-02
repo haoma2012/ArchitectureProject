@@ -70,16 +70,13 @@ public class NewWidgetUIDetailFragment extends BaseFragment {
     }
 
 
-    private List<String> getListData() {
-        List<String> list = new ArrayList<>();
+    private List<DetailItemModel> getListData() {
+        List<DetailItemModel> list = new ArrayList<>();
 
         for (int i = 0; i < 50; i++) {
-            list.add("BottomSheetDialog 使用");
-            list.add("BottomSheetFragment 使用");
-            list.add("BottomSheetDialog 使用");
-            list.add("BottomSheetDialog 使用");
-            list.add("BottomSheetDialog 使用");
-            list.add("BottomSheetDialog 使用");
+            DetailItemModel model = new DetailItemModel();
+            model.name = "普通弹框";
+            list.add(model);
         }
 
         return list;
@@ -122,6 +119,8 @@ public class NewWidgetUIDetailFragment extends BaseFragment {
         list.add(model5);
         list.add(model6);
         list.add(model7);
+
+        list.addAll(getListData());
 
         return list;
 

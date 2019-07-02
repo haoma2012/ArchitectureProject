@@ -9,4 +9,14 @@ import java.util.LinkedList;
 public class MyQueue<T> {
 
     private LinkedList<T> list = new LinkedList<>();
+
+    // 入队
+    public void enqueue(T e) {
+        list.add(e);
+    }
+
+    // 出对
+    public T dequeue() {
+        return list.removeFirst();
+    }
 }
